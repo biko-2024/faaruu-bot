@@ -7,11 +7,11 @@ from telethon.errors import ChatWriteForbiddenError, ChatAdminRequiredError
 # Configuration
 API_ID = 23449732
 API_HASH = '155f957734947d7d39c6300f9679d2c9'
-PHONE_NUMBER = '+251918365217'
+BOT_TOKEN = '7916099053:AAHOsZOYDFm0mPI0eMLEbJHZJsLcK486MxI'  # Replace with your bot token from BotFather
 HYMN_GROUP = 'Faaruu_Search'
 
-# Initialize client
-client = TelegramClient('user_session', API_ID, API_HASH)
+# Initialize client as bot instead of user
+client = TelegramClient('bot_session', API_ID, API_HASH).start(bot_token=BOT_TOKEN)
 
 async def search_hymns(query):
     """Search MP3 files with fuzzy matching"""
@@ -35,7 +35,6 @@ async def search_hymns(query):
 
 async def main():
     try:
-        await client.start(phone=PHONE_NUMBER)
         print("Bot is running...")
         
         @client.on(events.NewMessage)
