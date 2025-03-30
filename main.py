@@ -7,7 +7,7 @@ from telethon.errors import ChatWriteForbiddenError, ChatAdminRequiredError
 # Configuration
 API_ID = 23449732
 API_HASH = '155f957734947d7d39c6300f9679d2c9'
-PHONE_NUMBER = '+251918365217'  
+BOT_TOKEN = '7916099053:AAHOsZOYDFm0mPI0eMLEbJHZJsLcK486MxI'  # Replace with your bot token from BotFather 
 HYMN_GROUP = 'Faaruu_Search'
 
 # Initialize client as bot instead of user
